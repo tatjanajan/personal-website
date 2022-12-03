@@ -100,16 +100,55 @@ button {
   color: #fefefe;
 }
 .header__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.4rem;
-  padding: 2.4rem 0 5rem 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
 }
 .header__content-wrapper {
   max-width: 108rem;
   margin: 0 auto;
   height: 100%;
+}
+.header__content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 2.4rem 0 6rem 0;
+}
+.header__content-left {
+  display: flex;
+  align-items: flex-start;
+}
+.header__content-left img {
+  display: none;
+  margin-top: 3.6rem;
+}
+@media (min-width: 901px) {
+  .header__content-left img {
+    display: block;
+  }
+}
+.header__content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header__content-right img {
+  display: none;
+}
+@media (min-width: 901px) {
+  .header__content-right img {
+    display: block;
+  }
+}
+.header__content-right img:first-child {
+  width: 25.3rem;
+  margin-top: 2.4rem;
+}
+.header__content-right img:last-child {
+  width: 13.2rem;
+  margin-right: 3.6rem;
 }
 .header__photo {
   width: 12rem;
