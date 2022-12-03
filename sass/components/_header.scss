@@ -1,0 +1,76 @@
+@use '../abstracts' as *;
+
+.header {
+    padding: 0 1.6rem;
+    background-color: $header_bg;
+    color: $header_text;
+
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.4rem;
+        padding: 2.4rem 0 5rem 0;
+
+        &-wrapper {
+            max-width: 108rem;
+            margin: 0 auto;
+            height: 100%;
+        }
+    }
+
+    &__photo {
+        @include circle(12rem);
+        border: 0.5rem solid $header_text;
+    }
+
+    &__name {
+        font-family: "Courgette", cursive;
+        font-weight: $font-weight-normal;
+        font-size: 3.6rem;
+        text-align: center;
+        line-height: 1;
+    }
+    
+    &__subtitle {
+        text-align: center;
+        line-height: 1;
+    }
+
+    &__social {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.6rem;
+
+        &-link {
+            display: block;
+            text-decoration: none;
+
+            &:focus-visible {
+                outline: none;
+                border: none;
+                transform: scale(1.5);
+                transition: transform 250ms ease-in-out;
+                }
+            
+            @include respond(tab-land) {
+                &:hover {
+                    transform: scale(1.3);
+                    transition: transform 250ms ease-in-out;
+                }
+            }
+        }
+
+        .fab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include circle(3.2rem);
+            background-color: $header-icon_bg;
+            color: $header_bg;
+
+        }
+    }
+}

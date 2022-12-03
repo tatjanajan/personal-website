@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+  background-color: $body_bg;
+  font-family: $body_font-family;
+  font-size: 1.4rem;
+  color: $body_text;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
