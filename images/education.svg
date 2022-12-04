@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="360px" height="360px" viewBox="0 0 360 360" enable-background="new 0 0 360 360" xml:space="preserve">
+<g id="kapa">
+	<rect fill="#363C5E" width="360" height="360"/>
+	<polyline opacity="0.2" fill="#010101" points="333.352,147.084 360,173.812 360,360 233.577,360 22.598,148.167 	"/>
+	<rect x="275" y="168" fill="#626A8E" width="3" height="77"/>
+	<path fill="#CEB2D2" d="M254,230.905c0,0-16.516,20.285-74.5,20.285c-54.254,0-74.5-20.285-74.5-20.285V167h149V230.905z"/>
+	<polygon fill="#BE9BC3" points="333.352,147.084 179.54,207.166 25.729,147.084 179.54,87.001 	"/>
+	<ellipse fill="#626A8E" cx="180" cy="146.333" rx="6" ry="3.333"/>
+	<path fill="#626A8E" d="M182.735,143.368c0,0,48.36-6.034,95.265,25.338L275,170c0,0-44.633-28.833-89.833-23.667L182.735,143.368z
+		"/>
+	<circle fill="#626A8E" cx="276.333" cy="244.5" r="6.833"/>
+	<rect x="272" y="248" fill="#626A8E" width="1" height="13"/>
+	<rect x="280" y="248" fill="#626A8E" width="1" height="13"/>
+	<rect x="274" y="248" fill="#626A8E" width="1" height="13"/>
+	<rect x="278" y="248" fill="#626A8E" width="1" height="13"/>
+	<rect x="276" y="248" fill="#626A8E" width="1" height="13"/>
+</g>
+</svg>

@@ -11,9 +11,7 @@
         grid-template-columns: 1fr auto 1fr;
 
         &-wrapper {
-            max-width: 108rem;
-            margin: 0 auto;
-            height: 100%;
+            @include content-wrapper(108rem);
         }
 
         &-center {

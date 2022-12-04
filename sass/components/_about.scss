@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+.about {
+    background-color: $section-about_bg;
+
+    &__content {
+        display: grid;
+        @include content-wrapper(108rem);
+        padding: 5rem 0;
+
+        img {
+            justify-self: center;
+        }
+    }
+}

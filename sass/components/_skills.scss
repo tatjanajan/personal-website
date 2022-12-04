@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+.skills {
+    &__content {
+        @include content-wrapper(108rem);
+        padding: 7rem 0;
+    }
+
+    &__title {
+        font-family: $headings_font-family;
+        font-weight: $font-weight-normal;
+        font-size: 3rem;
+        text-align: center;
+    }
+}

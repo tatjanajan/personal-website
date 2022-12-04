@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="360px" height="360px" viewBox="0 0 360 360" enable-background="new 0 0 360 360" xml:space="preserve">
+<g id="torba">
+	<rect fill="#CEB2D2" width="360" height="360"/>
+	<polygon opacity="0.3" fill="#995FA5" points="62,245.881 176.869,360 360,360.063 360,182.096 296,118 62,118 	"/>
+	<path fill="#363C5E" d="M296,243c0,2.762-2.238,5-5,5H66c-2.761,0-5-2.238-5-5V120c0-2.761,2.239-5,5-5h225c2.762,0,5,2.239,5,5
+		V243z"/>
+	<path fill="#363C5E" d="M179.175,101.1c13.273,0,20.314,8.301,23.557,13.9H208c0,0-6.5-21-28.75-21S149,115,149,115h5.625
+		C158.268,109.4,165.901,101.1,179.175,101.1z"/>
+	<rect x="76" y="182" fill="#626A8E" width="206" height="5"/>
+	<polygon fill="#626A8E" points="61,164.965 61,172.036 76.063,187.1 79.6,183.564 	"/>
+	<polygon fill="#626A8E" points="296,165.965 278.4,183.564 281.937,187.1 296,173.036 	"/>
+	<rect x="161" y="173" fill="#626A8E" width="35" height="23"/>
+</g>
+</svg>

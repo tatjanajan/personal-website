@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="360px" height="360px" viewBox="0 0 360 360" enable-background="new 0 0 360 360" xml:space="preserve">
+<g id="mobitel">
+	<rect fill="#363C5E" width="360" height="360"/>
+	<polygon opacity="0.2" fill="#010101" points="48,246.082 182.668,360 360,360 360,158.182 314.843,111.25 	"/>
+	<path fill="#BE9BC3" d="M318,238c0,6.627-5.373,12-12,12H57c-6.627,0-12-5.373-12-12V119c0-6.627,5.373-12,12-12h249
+		c6.627,0,12,5.373,12,12V238z"/>
+	<path fill="#995FA5" d="M300,239c0,3.313-2.806,6-6.266,6H71.267c-3.461,0-6.267-2.687-6.267-6V118c0-3.313,2.806-6,6.267-6
+		h222.468c3.46,0,6.266,2.687,6.266,6V239z"/>
+	<path fill="#AF8FB5" d="M58,195.44c0,0.861-0.698,1.56-1.56,1.56h-0.88c-0.862,0-1.56-0.698-1.56-1.56V161.56
+		c0-0.861,0.698-1.56,1.56-1.56h0.88c0.862,0,1.56,0.698,1.56,1.56V195.44z"/>
+	<circle fill="#AF8FB5" cx="55.4" cy="210.547" r="2.808"/>
+	<circle fill="#AF8FB5" cx="55.4" cy="220.035" r="2.808"/>
+	<circle fill="#AF8FB5" cx="55.4" cy="145.266" r="3.9"/>
+	<circle fill="#AF8FB5" cx="55.4" cy="133.266" r="3.9"/>
+	<path fill="#6E7999" d="M138,244.951c0,0,27.261-75.971,62.765-80.779c35.503-4.81,60.388,80.828,60.388,80.828L138,244.951z"/>
+	<path fill="#626A8E" d="M88,244.962c0,0,21.5-59.916,49.5-63.708c28-3.793,47.625,63.746,47.625,63.746L88,244.962z"/>
+	<circle fill="#DFD3E2" cx="237.25" cy="154.75" r="17.25"/>
+	<polygon fill="#F1EAF1" points="100,134 117,134 117,123 88,123 88,151 100,151 	"/>
+	<polygon fill="#F1EAF1" points="265,134 248,134 248,123 277,123 277,151 265,151 	"/>
+	<polygon fill="#F1EAF1" points="100,223 117,223 117,234 88,234 88,206 100,206 	"/>
+	<polygon fill="#F1EAF1" points="265,223 248,223 248,234 277,234 277,206 265,206 	"/>
+	<path opacity="0.08" fill="#FFFFFF" d="M300,192H65v-74c0-3.313,2.745-6,6.13-6h222.739c3.386,0,6.131,2.687,6.131,6V192z"/>
+</g>
+</svg>

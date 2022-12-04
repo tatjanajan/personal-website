@@ -32,3 +32,8 @@ mobile first breakpoints
     @include square($size);
     border-radius: 50%;
 }
+
+@mixin content-wrapper($width) {
+    max-width: $width;
+    margin: 0 auto;
+} 

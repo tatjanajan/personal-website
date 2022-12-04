@@ -106,7 +106,6 @@ button {
 .header__content-wrapper {
   max-width: 108rem;
   margin: 0 auto;
-  height: 100%;
 }
 .header__content-center {
   display: flex;
@@ -335,6 +334,31 @@ button {
   .navbar__hamburger ~ .navbar__items {
     transform: unset;
   }
+}
+
+.skills__content {
+  max-width: 108rem;
+  margin: 0 auto;
+  padding: 7rem 0;
+}
+.skills__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.about {
+  background-color: #e2e9ef;
+}
+.about__content {
+  display: grid;
+  max-width: 108rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+.about__content img {
+  justify-self: center;
 }
 
 /*# sourceMappingURL=style.css.map */
