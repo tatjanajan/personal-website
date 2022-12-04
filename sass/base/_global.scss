@@ -2,6 +2,10 @@
 
 html {
     font-size: 62.5%;
+
+    &.menu-overlay {
+      overflow-y: hidden;
+    }
 }
 
 body {

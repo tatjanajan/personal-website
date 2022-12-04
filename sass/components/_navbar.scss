@@ -129,7 +129,7 @@
             transition: transform ease-in-out 250ms, opacity ease-in-out 250ms;
         }
 
-        &--x {
+        &[aria-expanded="true"] {
             #{$h}-line {
 
                 &:first-child {
@@ -146,7 +146,7 @@
 
             }
 
-            ~ #{$n}__items {
+            + #{$n}__items {
                 visibility: visible;
                 transform: translateY(100%);
             } 

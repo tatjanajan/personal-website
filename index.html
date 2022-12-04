@@ -11,14 +11,14 @@
 <body>
     <header class="header">
         <div class="header__content-wrapper">
-            <nav class="navbar" role="navigation" aria-label="Menu">
+            <nav class="navbar" role="navigation">
                 <span class="navbar__lang-toggle">HR/ENG</span>
-                <button class="navbar__hamburger" aria-expanded="false">
-                    <div class="navbar__hamburger-line"></div>
-                    <div class="navbar__hamburger-line"></div>
-                    <div class="navbar__hamburger-line"></div>
+                <button class="navbar__hamburger" aria-label="Menu" aria-controls="primary-navigation" aria-expanded="false">
+                    <div class="navbar__hamburger-line" aria-hidden="true"></div>
+                    <div class="navbar__hamburger-line" aria-hidden="true"></div>
+                    <div class="navbar__hamburger-line" aria-hidden="true"></div>
                 </button>
-                <ul class="navbar__items">
+                <ul class="navbar__items" id="primary-navigation">
                     <li class="navbar__item">
                         <a href="#skills" class="navbar__link">Vještine</a>
                     </li>
@@ -42,27 +42,27 @@
                     <h1 class="header__name">Tatjana Janković</h1>
                     <div class="header__subtitle">frontend developerica</div>
                     <ul class="header__social">
-                        <li>
+                        <li class="header__social-item">
                             <a href="https://twitter.com/tatjanajan" class="header__social-link" target="_blank">
                                 <i class="header__social-icon fab fa-twitter fa-lg"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="header__social-item">
                             <a href="https://www.facebook.com/tatjanajankovic" class="header__social-link" target="_blank">
                                 <i class="header__social-icon fab fa-facebook-f fa-lg"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="header__social-item">
                             <a href="https://instagram.com/tatjanajan/" class="header__social-link" target="_blank">
                                 <i class="header__social-icon fab fa-instagram fa-lg"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="header__social-item">
                             <a href="https://www.linkedin.com/in/tatjanajankovic" class="header__social-link" target="_blank">
                                 <i class="header__social-icon fab fa-linkedin-in fa-lg"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="header__social-item">
                             <a href="https://github.com/tatjanajan" class="header__social-link" target="_blank">
                                 <i class="header__social-icon fab fa-github fa-lg"></i>
                             </a>
@@ -109,24 +109,48 @@
 <script>
     const hamburger = document.querySelector('.navbar__hamburger');
     const links = document.querySelectorAll('.navbar__item');
+    const socialLinks = document.querySelectorAll('.header__social-link');
+    const html = document.documentElement;
 
     hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('navbar__hamburger--x');
+        const isOpened = hamburger.getAttribute('aria-expanded') === "true";
 
-        if (hamburger.classList.contains('navbar__hamburger--x')) {
-            hamburger.setAttribute("aria-expanded", "true");
+        if (isOpened) {
+            menuClose();
         } else {
-            hamburger.setAttribute("aria-expanded", "false");
+            menuOpen();
         }
     })
 
     links.forEach((link) => {
         link.addEventListener('click', () => {
-            hamburger.classList.remove('navbar__hamburger--x');
-            hamburger.setAttribute("aria-expanded", "false");
+            menuClose();
         })
     })
-    console.log(links);
+
+    socialLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            menuClose();
+        })
+    })
+
+    const menuOpen = () => {
+        hamburger.setAttribute('aria-expanded', "true");
+        html.classList.add('menu-overlay');
+
+        socialLinks.forEach((link) => {
+            link.setAttribute('tabindex', "-1");
+        })
+    }
+
+    const menuClose = () => {
+        hamburger.setAttribute('aria-expanded', "false");
+        html.classList.remove('menu-overlay');
+
+        socialLinks.forEach((link) => {
+            link.removeAttribute('tabindex');
+        })
+    }
     
 </script>
 </html>
