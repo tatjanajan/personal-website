@@ -80,6 +80,8 @@
     }
 
     &__social {
+        $hs: &;
+
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -104,14 +106,14 @@
             }
         }
 
-        .fab {
+        #{$hs}-icon {
             display: flex;
             justify-content: center;
             align-items: center;
             @include circle(3.2rem);
             background-color: $header-icon_bg;
+            font-size: 2rem;
             color: $header_bg;
-
         }
     }
 }
