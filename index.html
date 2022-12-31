@@ -44,27 +44,27 @@
                     <ul class="header__social">
                         <li class="header__social-item">
                             <a href="https://twitter.com/tatjanajan" class="header__social-link" target="_blank">
-                                <i class="header__social-icon fab fa-twitter fa-lg"></i>
+                                <i class="header__social-icon fab fa-twitter"></i>
                             </a>
                         </li>
                         <li class="header__social-item">
                             <a href="https://www.facebook.com/tatjanajankovic" class="header__social-link" target="_blank">
-                                <i class="header__social-icon fab fa-facebook-f fa-lg"></i>
+                                <i class="header__social-icon fab fa-facebook-f"></i>
                             </a>
                         </li>
                         <li class="header__social-item">
                             <a href="https://instagram.com/tatjanajan/" class="header__social-link" target="_blank">
-                                <i class="header__social-icon fab fa-instagram fa-lg"></i>
+                                <i class="header__social-icon fab fa-instagram"></i>
                             </a>
                         </li>
                         <li class="header__social-item">
                             <a href="https://www.linkedin.com/in/tatjanajankovic" class="header__social-link" target="_blank">
-                                <i class="header__social-icon fab fa-linkedin-in fa-lg"></i>
+                                <i class="header__social-icon fab fa-linkedin-in"></i>
                             </a>
                         </li>
                         <li class="header__social-item">
                             <a href="https://github.com/tatjanajan" class="header__social-link" target="_blank">
-                                <i class="header__social-icon fab fa-github fa-lg"></i>
+                                <i class="header__social-icon fab fa-github"></i>
                             </a>
                         </li>
                     </ul>
@@ -111,54 +111,17 @@
             </div>
         </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__copy">
+                Copyright &copy; Tatjana Janković <span class="footer__year"></span>.
+            </div>
+            <a href="#" aria-label="Scroll to top">
+                <i class="footer__arrow-icon fa-solid fa-circle-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
 </body>
-
-<script>
-    const hamburger = document.querySelector('.navbar__hamburger');
-    const links = document.querySelectorAll('.navbar__item');
-    const socialLinks = document.querySelectorAll('.header__social-link');
-    const html = document.documentElement;
-
-    hamburger.addEventListener('click', () => {
-        const isOpened = hamburger.getAttribute('aria-expanded') === "true";
-
-        if (isOpened) {
-            menuClose();
-        } else {
-            menuOpen();
-        }
-    })
-
-    links.forEach((link) => {
-        link.addEventListener('click', () => {
-            menuClose();
-        })
-    })
-
-    socialLinks.forEach((link) => {
-        link.addEventListener('click', () => {
-            menuClose();
-        })
-    })
-
-    const menuOpen = () => {
-        hamburger.setAttribute('aria-expanded', "true");
-        html.classList.add('menu-overlay');
-
-        socialLinks.forEach((link) => {
-            link.setAttribute('tabindex', "-1");
-        })
-    }
-
-    const menuClose = () => {
-        hamburger.setAttribute('aria-expanded', "false");
-        html.classList.remove('menu-overlay');
-
-        socialLinks.forEach((link) => {
-            link.removeAttribute('tabindex');
-        })
-    }
-    
-</script>
+<script src="scripts/mobileMenu.js"></script>
+<script src="scripts/footerYear.js"></script>
 </html>
