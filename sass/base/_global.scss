@@ -1,22 +1,23 @@
 @use '../abstracts' as *;
 
 html {
+    scroll-behavior: smooth;
     font-size: 62.5%;
 
     &.menu-overlay {
-      overflow-y: hidden;
+    overflow-y: hidden;
     }
 }
 
 body {
-  background-color: $body_bg;
-  font-family: $body_font-family;
-  font-size: 1.6rem;
-  color: $body_text;
+    background-color: $body_bg;
+    font-family: $body_font-family;
+    font-size: 1.6rem;
+    color: $body_text;
 }
 
 button {
-  padding: 0;
-  border: none;
-  background-color: transparent;
+    padding: 0;
+    border: none;
+    background-color: transparent;
 }
