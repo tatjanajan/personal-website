@@ -25,6 +25,10 @@
         @include circle(3.2rem);
         text-decoration: none;
 
+        @include respond(tab-port) {
+            @include circle(2.4rem);
+        }
+
         &:focus-visible {
             outline: 2px solid $body_text;
             outline-offset: 2px;
