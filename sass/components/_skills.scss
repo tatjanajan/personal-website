@@ -1,15 +1,92 @@
 @use '../abstracts' as *;
 
 .skills {
+    $s: &;
+
+    padding: 0 1.6rem;
+
     &__content {
         @include content-wrapper(108rem);
-        padding: 7rem 0;
+        padding: 4.8rem 0 6.4rem;
+
+        @include respond(tab-land) {
+            padding: 7.2rem 0 8.8rem 0;
+        }
     }
 
     &__title {
+        margin-bottom: 3.6rem;
         font-family: $headings_font-family;
         font-weight: $font-weight-normal;
         font-size: 3rem;
         text-align: center;
+    }
+
+    &__text {
+        text-align: center;
+        margin-bottom: 3.6rem;
+    }
+
+    &__wrapper {
+        display: grid;
+        @include content-wrapper(76rem);
+        
+        @include respond(tab-port) {
+            grid-template-columns: max-content 1fr;
+            gap: 2.4rem 1.2rem;
+        }
+    }
+    
+    &__group-title  {
+        justify-self: center;
+        font-family: $headings_font-family;
+        font-weight: $font-weight-normal;
+        font-size: 2rem;
+        
+        @include respond(tab-port) {
+            grid-column: span 2;
+        }
+    }
+
+    &__skill-name {
+        margin-top: 1rem;
+        font-weight: $font-weight-medium;
+        
+        @include respond(tab-port) {
+            justify-self: end;
+            margin-top: 0;
+        }
+    }
+
+    &__bar-wrapper {
+        height: 2rem;
+        background-color: $section-about_bg;
+        border-radius: 2rem;
+
+        + #{$s}__group-title {
+            margin-top: 3.2rem;
+
+            @include respond(tab-port) {
+                margin-top: 1.6rem;
+            }
+        }
+    }
+
+    &__bar {
+        width: var(--skills-bar-width);
+        height: 100%;
+        background-color: var(--skills-bar-color);
+        border-radius: 2rem;
+        animation: bar-animation ease-in-out 750ms;
+        transform-origin: left;
+    }
+}
+
+@keyframes bar-animation {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--skills-bar-width);
     }
 }
