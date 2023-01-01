@@ -1,6 +1,7 @@
 const hamburger = document.querySelector('.navbar__hamburger');
 const links = document.querySelectorAll('.navbar__item');
 const socialLinks = document.querySelectorAll('.header__social-link');
+const scrollTopLink = document.querySelector('.footer__scroll-top-link');
 const html = document.documentElement;
 
 hamburger.addEventListener('click', () => {
@@ -32,6 +33,7 @@ const menuOpen = () => {
     socialLinks.forEach((link) => {
         link.setAttribute('tabindex', "-1");
     })
+    scrollTopLink.setAttribute('tabindex', "-1");
 }
 
 const menuClose = () => {
@@ -41,4 +43,6 @@ const menuClose = () => {
     socialLinks.forEach((link) => {
         link.removeAttribute('tabindex');
     })
+    scrollTopLink.removeAttribute('tabindex');
+    
 }
