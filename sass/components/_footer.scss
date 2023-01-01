@@ -17,8 +17,18 @@
         }
     }
 
-    &__copy {
+    &__copyright {
         font-family: $headings_font-family;
+    }
+
+    &__scroll-top-link {
+        @include circle(3.2rem);
+        text-decoration: none;
+
+        &:focus-visible {
+            outline: 2px solid $body_text;
+            outline-offset: 2px;
+        }
     }
 
     &__arrow-icon {

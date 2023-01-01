@@ -429,8 +429,18 @@ button {
     justify-content: space-between;
   }
 }
-.footer__copy {
+.footer__copyright {
   font-family: "Oswald", sans-serif;
+}
+.footer__scroll-top-link {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.footer__scroll-top-link:focus-visible {
+  outline: 2px solid #353b5e;
+  outline-offset: 2px;
 }
 .footer__arrow-icon {
   font-size: 3.2rem;
