@@ -402,6 +402,7 @@ button {
   height: 2rem;
   background-color: #e2e9ef;
   border-radius: 2rem;
+  overflow: hidden;
 }
 .skills__bar-wrapper + .skills__group-title {
   margin-top: 3.2rem;
@@ -422,10 +423,7 @@ button {
 
 @keyframes bar-animation {
   from {
-    width: 0;
-  }
-  to {
-    width: var(--skills-bar-width);
+    transform: scaleX(0);
   }
 }
 .about {

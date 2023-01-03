@@ -62,6 +62,7 @@
         height: 2rem;
         background-color: $section-about_bg;
         border-radius: 2rem;
+        overflow: hidden;
 
         + #{$s}__group-title {
             margin-top: 3.2rem;
@@ -84,9 +85,6 @@
 
 @keyframes bar-animation {
     from {
-        width: 0;
-    }
-    to {
-        width: var(--skills-bar-width);
+        transform: scaleX(0);
     }
 }
