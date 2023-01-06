@@ -1,20 +1,15 @@
 @use '../abstracts' as *;
 
 .footer {
-    padding: 0 1.6rem;
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2.4rem;
-        @include content-wrapper(108rem);
-        padding: 5rem 0;
-        
-        @include respond(tab-port) {
-            flex-direction: row;
-            justify-content: space-between;            
-        }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    padding: 3.2rem 1.6rem;
+    
+    @include respond(tab-port) {
+        flex-direction: row;
+        justify-content: space-between;            
     }
 
     &__copyright {
