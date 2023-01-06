@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .header {
-    padding: 0 1.6rem;
+    padding-top: $navbar_height;
     background-color: $header_bg;
     color: $header_text;
 
@@ -9,10 +9,7 @@
     &__content {
         display: grid;
         grid-template-columns: 1fr auto 1fr;
-
-        &-wrapper {
-            @include content-wrapper(108rem);
-        }
+        @include content-wrapper(108rem);
 
         &-center {
             display: flex;

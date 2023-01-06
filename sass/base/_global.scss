@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: $navbar_height;
     font-size: 62.5%;
 
     &.menu-overlay {
