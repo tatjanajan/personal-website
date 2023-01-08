@@ -198,18 +198,16 @@ strong {
 .header__social-link {
   display: block;
   text-decoration: none;
+  transition: transform 250ms ease-in-out;
 }
 .header__social-link:focus-visible {
   outline: none;
   border: none;
   transform: scale(1.5);
-  transition: transform 250ms ease-in-out;
 }
 @media (min-width: 901px) {
   .header__social-link:hover {
     transform: scale(1.3);
-    opacity: 1;
-    transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
   }
 }
 .header__social .header__social-icon {
@@ -339,14 +337,14 @@ strong {
   z-index: -1;
   width: calc(100% + 1.2rem);
   height: calc(100% + 0.4rem);
-  transform: scaleX(0);
   background-color: #fefefe;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms ease-in-out;
 }
 @media (min-width: 901px) {
   .navbar__link::before {
-    top: 0;
-    transform: unset;
-    display: none;
+    top: -0.1rem;
   }
 }
 .navbar__link:focus-visible {
@@ -356,17 +354,13 @@ strong {
 }
 .navbar__link:focus-visible::before {
   transform: scaleX(1);
-  transform-origin: left;
-  transition: transform 250ms ease-in-out;
 }
 @media (min-width: 901px) {
-  .navbar__link:hover, .navbar__link:focus-visible {
+  .navbar__link:hover {
     color: #353b5e;
-    transform: rotate(-10deg) scale(1.1);
-    transition: transform 250ms ease-in-out;
   }
-  .navbar__link:hover::before, .navbar__link:focus-visible::before {
-    display: block;
+  .navbar__link:hover::before {
+    transform: scaleX(1);
   }
 }
 .navbar__hamburger {
@@ -520,6 +514,11 @@ strong {
 }
 .about__img {
   justify-self: center;
+  border-radius: 50%;
+  transition: border-radius 350ms linear;
+}
+.about__img:hover {
+  border-radius: 10%;
 }
 @media (min-width: 901px) {
   .about__text--1 {
