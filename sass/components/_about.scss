@@ -19,6 +19,12 @@
 
     &__img {
         justify-self: center;
+        border-radius: 50%;
+        transition: border-radius 350ms linear;
+
+        &:hover {
+            border-radius: 10%;
+        }
     }
 
     &__text {
