@@ -390,13 +390,13 @@ strong {
   transition: transform ease-in-out 250ms, opacity ease-in-out 250ms;
 }
 .navbar__hamburger[aria-expanded=true] .navbar__hamburger-line:first-child {
-  transform: rotate(45deg);
+  transform: translateX(0.4rem) rotate(45deg);
 }
 .navbar__hamburger[aria-expanded=true] .navbar__hamburger-line:nth-child(2) {
   opacity: 0;
 }
 .navbar__hamburger[aria-expanded=true] .navbar__hamburger-line:last-child {
-  transform: rotate(-45deg);
+  transform: translateX(0.4rem) rotate(-45deg);
 }
 .navbar__hamburger[aria-expanded=true] + .navbar__items {
   visibility: visible;

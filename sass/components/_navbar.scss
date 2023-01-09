@@ -137,7 +137,7 @@
             #{$h}-line {
 
                 &:first-child {
-                    transform: rotate(45deg);
+                    transform: translateX(0.4rem) rotate(45deg);
                 }
 
                 &:nth-child(2) {
@@ -145,7 +145,7 @@
                 }
 
                 &:last-child {
-                    transform: rotate(-45deg);
+                    transform: translateX(0.4rem) rotate(-45deg);
                 }
 
             }
