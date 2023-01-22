@@ -70,7 +70,7 @@
             z-index: -1;
             width: calc(100% + 1.2rem);
             height: calc(100% + 0.4rem);
-            background-color: $body_bg;
+            background-color: $navbar-link-hover_bg;
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 250ms ease-in-out;
