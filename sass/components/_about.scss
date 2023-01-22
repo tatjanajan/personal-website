@@ -1,6 +1,8 @@
 @use '../abstracts' as *;
 
 .about {
+    overflow-x: hidden;
+
     background-color: $section-about_bg;
     padding: 0 1.6rem;
 
@@ -20,36 +22,82 @@
     &__img {
         justify-self: center;
         border-radius: 50%;
-        transition: border-radius 350ms linear;
+        opacity: 0;
+        transition:
+            border-radius $about-transition_fast linear,
+            transform $about-transition_slow ease-out,
+            opacity $about-transition_slow ease-out;
 
         &:hover {
             border-radius: 10%;
         }
-    }
 
-    &__text {
-        @include respond(tab-land) {
-            &--1 {
-                grid-column: 1 / span 2;
-                grid-row: 1;
-            }
+        &--1 {
+            transform: translateX(50%);
 
-            &--2 {
-                grid-column: 1 / span 2;
-                grid-row: 2;
-            }
-
-            &--3 {
-                grid-column: 1 / span 2;
-                grid-row: 3;
+            @include respond(tab-land) {
+                transition-delay: 0s, $about-delay, $about-delay;
             }
         }
 
-        @include respond(desktop) {
-            
-            &--2 {
-                grid-column: 2 / span 2;
+        &--2 {
+            transform: translateX(50%);
+
+            @include respond(tab-land) {
+                transition-delay: 0s, $about-delay, $about-delay; 
+            }
+
+            @include respond(desktop) {
+                transform: translateX(-50%);
+                transition-delay: 0s, 0s, 0s;
+            }
+        }
+
+        &--3 {
+            transform: translateX(50%);
+
+            @include respond(tab-land) {
+                transition-delay: 0s, $about-delay, $about-delay;
+            }
+        }
+    }
+
+    &__text {
+        opacity: 0;
+        transition:
+            transform $about-transition_slow ease-out,
+            opacity $about-transition_slow ease-out;
+
+        &--1 {
+            transform: translateX(-50%);
+
+            @include respond(tab-land) {
+                grid-column: 1 / span 2;
+                grid-row: 1;
+            }
+        }
+
+        &--2 {
+            transform: translateX(-50%); 
+
+            @include respond(tab-land) {
+                grid-column: 1 / span 2;
                 grid-row: 2;
+            }
+
+            @include respond(desktop) {
+                grid-column: 2 / span 2;
+                transform: translateX(50%);
+                transition-delay: $about-delay, $about-delay;
+            }
+        }
+
+        &--3 {
+            transform: translateX(-50%);
+
+            @include respond(tab-land) {
+                grid-column: 1 / span 2;
+                grid-row: 3;
             }
         }
 
@@ -69,5 +117,10 @@
             margin-bottom: 1.6rem;
             line-height: 1.6;
         }
+    }
+
+    &__item--slide-in {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
