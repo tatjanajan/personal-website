@@ -3,7 +3,7 @@
 .about {
     overflow-x: hidden;
 
-    background-color: $section-about_bg;
+    background-color: var(--section-about_bg);
     padding: 0 1.6rem;
 
     &__content {

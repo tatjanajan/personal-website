@@ -10,11 +10,31 @@ html {
     }
 }
 
+:root {
+    --body_bg: #{$body_bg};
+    --body_text: #{$body_text};
+    --header_bg: #{$header_bg};
+    --header_text: #{$header_text};
+    --header-icon_bg: #{$header-icon_bg};
+    --navbar-link-hover_bg: #{$navbar-link-hover_bg};
+    --section-about_bg: #{$section-about_bg};
+    --skills-bar-wrapper_bg: #{$skills-bar-wrapper_bg};
+
+    @media (prefers-color-scheme: dark) {
+        --body_bg: #{$body_bg-dark};
+        --body_text: #{$body_text-dark};
+        --header_text: #{$header_text-dark};
+        --navbar-link-hover_bg: #{$navbar-link-hover_bg-dark};
+        --section-about_bg: #{$section-about_bg-dark};
+        --skills-bar-wrapper_bg: #{$skills-bar-wrapper_bg-dark};
+    }
+}
+
 body {
-    background-color: $body_bg;
+    background-color: var(--body_bg);
     font-family: $body_font-family;
     font-size: 1.6rem;
-    color: $body_text;
+    color: var(--body_text);
 }
 
 button {

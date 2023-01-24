@@ -86,11 +86,32 @@ html.menu-overlay {
   overflow-y: hidden;
 }
 
+:root {
+  --body_bg: #fefefe;
+  --body_text: #353b5e;
+  --header_bg: #353b5e;
+  --header_text: #fefefe;
+  --header-icon_bg: #C88FC4;
+  --navbar-link-hover_bg: #fefefe;
+  --section-about_bg: #e2e9ef;
+  --skills-bar-wrapper_bg: #e2e9ef;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body_bg: #21253b;
+    --body_text: #ced1e4;
+    --header_text: #e5e6f1;
+    --navbar-link-hover_bg: #e5e6f1;
+    --section-about_bg: #1a1d2e;
+    --skills-bar-wrapper_bg: #090d10;
+  }
+}
+
 body {
-  background-color: #fefefe;
+  background-color: var(--body_bg);
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  color: #353b5e;
+  color: var(--body_text);
 }
 
 button {
@@ -105,8 +126,8 @@ strong {
 
 .header {
   padding-top: 5.6rem;
-  background-color: #353b5e;
-  color: #fefefe;
+  background-color: var(--header_bg);
+  color: var(--header_text);
   overflow: hidden;
 }
 .header__content {
@@ -170,7 +191,7 @@ strong {
   width: 12rem;
   height: 12rem;
   border-radius: 50%;
-  border: 0.5rem solid #fefefe;
+  border: 0.5rem solid var(--header_text);
   transform: translateX(-50px);
   opacity: 0;
   animation: slide-from-top 550ms ease-in-out forwards;
@@ -217,9 +238,9 @@ strong {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
-  background-color: #C88FC4;
+  background-color: var(--header-icon_bg);
   font-size: 2rem;
-  color: #353b5e;
+  color: var(--header_bg);
 }
 
 @keyframes slide-from-left {
@@ -280,11 +301,11 @@ strong {
   align-items: center;
   height: 5.6rem;
   padding: 0 1.6rem;
-  background-color: #353b5e;
+  background-color: var(--header_bg);
 }
 .navbar__lang-toggle {
   z-index: 100;
-  color: #fefefe;
+  color: var(--header_text);
 }
 .navbar__items {
   position: absolute;
@@ -299,7 +320,7 @@ strong {
   width: 100%;
   height: 100vh;
   padding-top: 9.6rem;
-  background-color: #353b5e;
+  background-color: var(--header_bg);
   transition: transform ease-in-out 250ms, visibility ease-in-out 250ms;
 }
 @media (min-width: 901px) {
@@ -321,7 +342,7 @@ strong {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
-  color: #fefefe;
+  color: var(--header_text);
 }
 @media (min-width: 901px) {
   .navbar__link {
@@ -337,7 +358,7 @@ strong {
   z-index: -1;
   width: calc(100% + 1.2rem);
   height: calc(100% + 0.4rem);
-  background-color: #fefefe;
+  background-color: var(--navbar-link-hover_bg);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 250ms ease-in-out;
@@ -350,14 +371,14 @@ strong {
 .navbar__link:focus-visible {
   border: none;
   outline: none;
-  color: #353b5e;
+  color: var(--header_bg);
 }
 .navbar__link:focus-visible::before {
   transform: scaleX(1);
 }
 @media (min-width: 901px) {
   .navbar__link:hover {
-    color: #353b5e;
+    color: var(--header_bg);
   }
   .navbar__link:hover::before {
     transform: scaleX(1);
@@ -369,22 +390,22 @@ strong {
   flex-direction: column;
   gap: 0.8rem;
   width: 3.6rem;
-  color: #fefefe;
+  color: var(--header_text);
   cursor: pointer;
   padding: 0.4rem;
 }
 .navbar__hamburger:focus-visible {
   outline: none;
-  background-color: #fefefe;
+  background-color: var(--header_text);
 }
 .navbar__hamburger:focus-visible .navbar__hamburger-line {
-  background-color: #353b5e;
+  background-color: var(--header_bg);
 }
 .navbar__hamburger-line {
   width: 100%;
   height: 0.2rem;
   opacity: 1;
-  background-color: #fefefe;
+  background-color: var(--header_text);
   border-radius: 1rem;
   transform-origin: left center;
   transition: transform ease-in-out 250ms, opacity ease-in-out 250ms;
@@ -469,7 +490,7 @@ strong {
 }
 .skills__bar-wrapper {
   height: 2rem;
-  background-color: #e2e9ef;
+  background-color: var(--skills-bar-wrapper_bg);
   border-radius: 2rem;
   overflow: hidden;
 }
@@ -502,7 +523,7 @@ strong {
 }
 .about {
   overflow-x: hidden;
-  background-color: #e2e9ef;
+  background-color: var(--section-about_bg);
   padding: 0 1.6rem;
 }
 .about__content {
@@ -646,12 +667,12 @@ strong {
   }
 }
 .footer__scroll-top-link:focus-visible {
-  outline: 2px solid #353b5e;
+  outline: 2px solid var(--body_text);
   outline-offset: 2px;
 }
 .footer__arrow-icon {
   font-size: 3.2rem;
-  color: #353b5e;
+  color: var(--body_text);
 }
 @media (min-width: 601px) {
   .footer__arrow-icon {

@@ -60,7 +60,7 @@
 
     &__bar-wrapper {
         height: 2rem;
-        background-color: $skills-bar-wrapper_bg;
+        background-color: var(--skills-bar-wrapper_bg);
         border-radius: 2rem;
         overflow: hidden;
 
