@@ -11,6 +11,8 @@ html {
 }
 
 :root {
+    color-scheme: light dark;
+    
     --body_bg: #{$body_bg};
     --body_text: #{$body_text};
     --header_bg: #{$header_bg};

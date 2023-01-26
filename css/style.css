@@ -87,6 +87,7 @@ html.menu-overlay {
 }
 
 :root {
+  color-scheme: light dark;
   --body_bg: #fefefe;
   --body_text: #353b5e;
   --header_bg: #353b5e;
