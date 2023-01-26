@@ -19,6 +19,8 @@ html {
     --navbar-link-hover_bg: #{$navbar-link-hover_bg};
     --section-about_bg: #{$section-about_bg};
     --skills-bar-wrapper_bg: #{$skills-bar-wrapper_bg};
+    --selection-highlight_bg: #{$selection-highlight_bg};
+    --selection-highlight_text: #{$selection-highlight_text};
 
     @media (prefers-color-scheme: dark) {
         --body_bg: #{$body_bg-dark};
@@ -45,4 +47,9 @@ button {
 
 strong {
     font-weight: $font-weight-medium;
+}
+
+::selection {
+    color: var(--selection-highlight_text);
+    background-color: var(--selection-highlight_bg);
 }

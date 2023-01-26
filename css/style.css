@@ -95,6 +95,8 @@ html.menu-overlay {
   --navbar-link-hover_bg: #fefefe;
   --section-about_bg: #e2e9ef;
   --skills-bar-wrapper_bg: #e2e9ef;
+  --selection-highlight_bg: #72477C;
+  --selection-highlight_text: #fefefe;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -122,6 +124,11 @@ button {
 
 strong {
   font-weight: 600;
+}
+
+::selection {
+  color: var(--selection-highlight_text);
+  background-color: var(--selection-highlight_bg);
 }
 
 .header {
@@ -505,7 +512,7 @@ strong {
 .skills__bar {
   width: 0;
   height: 100%;
-  background-color: var(--skills-bar-color);
+  background-color: var(--skills-bar-color, var(--body_text));
   border-radius: 2rem;
   transform-origin: left;
 }
