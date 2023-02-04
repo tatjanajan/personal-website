@@ -11,9 +11,15 @@
         flex-direction: row;
         justify-content: space-between;            
     }
-
+    
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+    
     &__copyright {
         font-family: $headings_font-family;
+        margin-right: 2.4rem;
     }
 
     &__scroll-top-link {
@@ -36,6 +42,24 @@
         
         @include respond(tab-port) {
             font-size: 2.4rem;
+        }
+    }
+
+    &__theme-switch {
+        color: currentColor;
+        padding-inline: 0.8rem;
+        padding-block: 0.4rem;
+        border-radius: 0.4rem;
+
+        &:hover,
+        &:focus-visible {
+            outline: none;
+            background-color: var(--section-about_bg);
+        }
+
+        &-text {
+            margin-right: 0.4rem;
+            font-size: 1.4rem;
         }
     }
 }

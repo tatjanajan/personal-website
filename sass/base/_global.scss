@@ -1,15 +1,5 @@
 @use '../abstracts' as *;
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: $navbar_height;
-    font-size: 62.5%;
-
-    &.menu-overlay {
-    overflow-y: hidden;
-    }
-}
-
 :root {
     color-scheme: light dark;
     
@@ -23,8 +13,14 @@ html {
     --skills-bar-wrapper_bg: #{$skills-bar-wrapper_bg};
     --selection-highlight_bg: #{$selection-highlight_bg};
     --selection-highlight_text: #{$selection-highlight_text};
+}
 
-    @media (prefers-color-scheme: dark) {
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: $navbar_height;
+    font-size: 62.5%;
+
+    &[data-theme="dark"] {
         --body_bg: #{$body_bg-dark};
         --body_text: #{$body_text-dark};
         --header_text: #{$header_text-dark};
@@ -32,7 +28,12 @@ html {
         --section-about_bg: #{$section-about_bg-dark};
         --skills-bar-wrapper_bg: #{$skills-bar-wrapper_bg-dark};
     }
+
+    &.menu-overlay {
+        overflow-y: hidden;
+    }
 }
+
 
 body {
     background-color: var(--body_bg);
@@ -45,6 +46,7 @@ button {
     padding: 0;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 strong {

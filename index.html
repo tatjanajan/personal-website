@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/theme-toggle.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/1a60559517.js" crossorigin="anonymous"></script> 
     <title>Tatjana Janković</title>
@@ -34,7 +35,7 @@
         </nav>
         <div class="header__content">
             <div class="header__content-left">
-                <img src="images/monitor.svg" alt="Illustration of computer with code on the screen" />
+                <img class="header__illustration-computer" src="images/monitor.svg" alt="Illustration of computer with code on the screen" />
             </div>
             <div class="header__content-center">
                 <img class="header__photo" src="images/tatjana-jankovic.jpg" alt="Tatjana Jankovic" />
@@ -69,8 +70,8 @@
                 </ul>
             </div>
             <div class="header__content-right">
-                <img src="images/bookshelf.svg" alt="Illustration of books on the shelf" />
-                <img src="images/flower.svg" alt="Illustration of a flower pot" />
+                <img class="header__illustration-books" src="images/bookshelf.svg" alt="Illustration of books on the shelf" />
+                <img class="header__illustration-flower" src="images/flower.svg" alt="Illustration of a flower pot" />
             </div>
         </div>
     </header>
@@ -144,8 +145,15 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__copyright">
-            Copyright &copy; Tatjana Janković <span class="footer__year"></span>.
+        <div class="footer__content">
+            <div class="footer__copyright">
+                Copyright &copy; Tatjana Janković <span class="footer__year"></span>.
+            </div>
+            <button class="footer__theme-switch">
+                <span class="footer__theme-switch-text">Promijeni temu:</span>
+                <i class="footer__theme-icon fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+            </button>
         </div>
         <a class="footer__scroll-top-link" href="#" aria-label="Scroll to top">
             <i class="footer__arrow-icon fa-solid fa-circle-arrow-up"></i>
