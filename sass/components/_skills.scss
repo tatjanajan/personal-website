@@ -3,7 +3,7 @@
 .skills {
     $s: &;
 
-    padding: 0 1.6rem;
+    padding-inline: 1.6rem;
 
     &__content {
         @include content-wrapper(108rem);

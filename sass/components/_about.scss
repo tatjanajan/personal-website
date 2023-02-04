@@ -4,14 +4,14 @@
     overflow-x: hidden;
 
     background-color: var(--section-about_bg);
-    padding: 0 1.6rem;
+    padding-inline: 1.6rem;
 
     &__content {
         display: grid;
         gap: 4.8rem 3.2rem;
         align-items: center;
         @include content-wrapper(108rem);
-        padding: 5rem 0;
+        padding-block: 5rem;
         
         @include respond(tab-land) {
             grid-template-columns: repeat(3, 1fr);

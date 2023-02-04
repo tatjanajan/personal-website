@@ -10,7 +10,7 @@
         display: grid;
         grid-template-columns: 1fr auto 1fr;
         @include content-wrapper(108rem);
-        padding: 0 1.6rem;
+        padding-inline: 1.6rem;
 
         &-center {
             display: flex;
