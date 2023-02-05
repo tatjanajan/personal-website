@@ -22,7 +22,7 @@ const setPreference = () => {
 const reflectPreference = () => {
     document.firstElementChild.setAttribute('data-theme', theme.value);
 
-    document.querySelector('.footer__theme-switch')?.setAttribute('aria-label', theme.value);
+    document.querySelector('.theme-switch')?.setAttribute('aria-label', theme.value);
 }
 
 const theme = {
@@ -37,7 +37,7 @@ window.onload = () => {
     reflectPreference();
 
     // now this script can find and listen for clicks on the button
-    document.querySelector('.footer__theme-switch').addEventListener('click', onClick);
+    document.querySelector('.theme-switch').addEventListener('click', onClick);
 }
 
 // sync with system changes

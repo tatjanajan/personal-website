@@ -89,6 +89,8 @@ mobile first breakpoints
   --skills-bar-wrapper_bg: #e2e9ef;
   --selection-highlight_bg: #72477C;
   --selection-highlight_text: #fefefe;
+  --theme-toggle_bg: #e2e9ef;
+  --theme-icon-inactive_color: rgba(53, 59, 94, 0.5);
 }
 
 html {
@@ -344,7 +346,7 @@ strong {
 }
 .navbar__link {
   position: relative;
-  z-index: 0;
+  isolation: isolate;
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -659,11 +661,23 @@ strong {
 }
 .footer__content {
   display: flex;
+  flex-direction: column;
   align-items: center;
+}
+@media (min-width: 601px) {
+  .footer__content {
+    flex-direction: row;
+  }
 }
 .footer__copyright {
   font-family: "Oswald", sans-serif;
   margin-right: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+@media (min-width: 601px) {
+  .footer__copyright {
+    margin-bottom: 0;
+  }
 }
 .footer__scroll-top-link {
   width: 3.2rem;
@@ -691,19 +705,47 @@ strong {
     font-size: 2.4rem;
   }
 }
-.footer__theme-switch {
-  color: currentColor;
-  padding-inline: 0.8rem;
-  padding-block: 0.4rem;
-  border-radius: 0.4rem;
+
+.theme-switch {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  width: 5.6rem;
+  height: 2.8rem;
+  background-color: var(--theme-toggle_bg);
+  border-radius: 2rem;
+  transition: background-color 200ms ease-in-out;
 }
-.footer__theme-switch:hover, .footer__theme-switch:focus-visible {
-  outline: none;
-  background-color: var(--section-about_bg);
+.theme-switch::after {
+  position: absolute;
+  z-index: -1;
+  left: 0.2rem;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--body_bg);
+  border-radius: 50%;
+  transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
 }
-.footer__theme-switch-text {
-  margin-right: 0.4rem;
-  font-size: 1.4rem;
+.theme-switch__icon {
+  flex: 0 0 50%;
+  transition: color 200ms ease-in-out;
+}
+.theme-switch__icon--sun {
+  color: var(--body_text);
+}
+.theme-switch__icon--moon {
+  color: var(--theme-icon-inactive_color);
+}
+.theme-switch[aria-label=dark]:after {
+  transform: translateX(calc(5.6rem - 2.4rem - 4px));
+}
+.theme-switch[aria-label=dark] .theme-switch__icon--sun {
+  color: var(--theme-icon-inactive_color);
+}
+.theme-switch[aria-label=dark] .theme-switch__icon--moon {
+  color: var(--body_text);
 }
 
 /*# sourceMappingURL=style.css.map */

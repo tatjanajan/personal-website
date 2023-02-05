@@ -14,12 +14,22 @@
     
     &__content {
         display: flex;
+        flex-direction: column;
         align-items: center;
+
+        @include respond(tab-port) {
+            flex-direction: row;
+        }
     }
     
     &__copyright {
         font-family: $headings_font-family;
         margin-right: 2.4rem;
+        margin-bottom: 2.4rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 0;
+        }
     }
 
     &__scroll-top-link {
@@ -42,24 +52,6 @@
         
         @include respond(tab-port) {
             font-size: 2.4rem;
-        }
-    }
-
-    &__theme-switch {
-        color: currentColor;
-        padding-inline: 0.8rem;
-        padding-block: 0.4rem;
-        border-radius: 0.4rem;
-
-        &:hover,
-        &:focus-visible {
-            outline: none;
-            background-color: var(--section-about_bg);
-        }
-
-        &-text {
-            margin-right: 0.4rem;
-            font-size: 1.4rem;
         }
     }
 }
