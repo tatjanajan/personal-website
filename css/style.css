@@ -315,6 +315,14 @@ strong {
 .navbar__lang-toggle {
   z-index: 100;
   color: var(--header_text);
+  font-size: 1.4rem;
+}
+.navbar__lang-toggle-link {
+  color: var(--header_text);
+  text-decoration: none;
+}
+.navbar__lang-toggle-link:hover {
+  color: var(--header-icon_bg);
 }
 .navbar__items {
   position: absolute;
