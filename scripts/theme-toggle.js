@@ -32,13 +32,13 @@ const theme = {
 // set early so no page flashes / CSS is made aware
 reflectPreference();
 
-window.onload = () => {
-    // set on load so screen readers can see latest value on the button
-    reflectPreference();
+window.addEventListener('load', () => {
+   // set on load so screen readers can see latest value on the button
+   reflectPreference();
 
-    // now this script can find and listen for clicks on the button
-    document.querySelector('.theme-switch').addEventListener('click', onClick);
-}
+   // now this script can find and listen for clicks on the button
+   document.querySelector('.theme-switch').addEventListener('click', onClick);
+});
 
 // sync with system changes
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({matches:isDark}) => {
