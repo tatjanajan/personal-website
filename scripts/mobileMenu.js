@@ -4,6 +4,16 @@ const socialLinks = document.querySelectorAll('.header__social-link');
 const scrollTopLink = document.querySelector('.footer__scroll-top-link');
 const html = document.documentElement;
 
+
+window.addEventListener('popstate', (event) => { 
+    const isOpened = hamburger.getAttribute('aria-expanded') === "true";
+    
+    if(event && isOpened){
+        menuClose();
+    }
+})
+history.pushState({page: 1}, "", "");
+
 hamburger.addEventListener('click', () => {
     const isOpened = hamburger.getAttribute('aria-expanded') === "true";
 
